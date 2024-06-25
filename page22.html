@@ -1,0 +1,62 @@
+
+<html>
+<head>
+  <title>Orders</title>
+  <style>
+    body {
+      background-color: cyan;
+    }
+  </style>
+</head>
+<body>
+  <h1>My eshop</h1>
+  <nav>
+    <a href="company.html">Company</a> |
+    <a href="orders.html">Orders</a>
+  </nav>
+
+  <!-- Σελίδα Company -->
+  <h2>Εταιρείας</h2>
+  <ul style="color: blue;">
+    <li>Πληροφορίες</li>
+    <li>Διεύθυνση</li>
+    <li>Τηλέφωνο</li>
+  </ul>
+  <img src="image1.jpg" alt="Εικόνα">
+
+  <!-- Σελίδα Orders -->
+  <h2>Orders Form</h2>
+  <form>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" required><br><br>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" required><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="payment">Payment:</label>
+    <select id="payment" name="payment">
+      <option value="cash">Cash</option>
+      <option value="credit">Credit</option>
+      <option value="other">Other</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Τα στοιχεία σας έχουν επαληθευτεί και η παραγγελία σας θα καταχωρηθεί επιτυχώς!');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
